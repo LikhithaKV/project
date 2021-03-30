@@ -1,0 +1,29 @@
+package ty.training.programs;
+
+public class SummationOfFirst3MinimumElements {
+
+	public static void main(FingWordWhichIsHavingMinLength[] args) {
+		int a[]= {1,3,2,4,5};
+		for (int i = 0; i < a.length-1; i++) {
+			for (int j = i+1; j< a.length; j++) {
+				
+				if(a[i]>a[j]) {
+					int temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+							
+				}
+			}
+		}
+			
+		
+		int sum=0;
+			for(int i=0;i<3;i++) {
+			 sum=sum+a[i];
+			}
+			System.out.println(sum);
+		}
+	}
+
+
+
